@@ -1,0 +1,121 @@
+<html>
+  <head>
+	  
+	  
+	     <meta charset="utf-8">
+    <title>Panorama</title>
+    <title>ARbook; Image</title>
+    <meta name="description" content="ARbook">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style type="text/css">
+  body,td,th {
+	font-family: Microsoft YaHei, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 20px; 
+	
+}
+	  
+body {
+	background-color: #FFD701;
+	
+} 
+	  .text1{word-spacing:3px;}
+	  
+  </style>
+	  
+	  
+	  
+	  
+	  
+	  <style>
+	  .par {
+   /* color: blue; */
+		  
+}
+
+		  	  .par::before {
+   /* content: "nono"; 
+				  page-break-before: always; */
+}
+
+		  
+		  
+	  </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+			var clickedA1 = false;
+			var clickedA2 = false;
+			
+			var A1 = "id_95";
+			var A2 = "id_175";
+			
+        var counter = 0;
+            var words = $("p:first").text().split(" ");
+            var text = words.join("</span> <span>");
+            $("p:first").html("<span>" + text + "</span>");
+			
+			
+			
+			$("span").each(function(){
+    var $span = $(this);
+
+ 
+
+    var spanTxt = $span.text();
+				counter++;
+				//alert(spanTxt);
+				$span.attr('id', "id_"+counter);
+			
+    // do something with the above
+});
+			
+			
+			
+            $("span").click(function () {
+             // $(this).css("background-color","yellow");
+				$(this).addClass("par");
+				
+				var newbit = ($(this).html());
+				newbit = "<br><br>" + newbit;
+				$(this).html(newbit);
+				//alert($(this).attr('id'));
+				
+				if($(this).attr('id') == A1){clickedA1=true};
+				if($(this).attr('id') == A2){clickedA2=true};
+				
+				
+				if(clickedA1 && clickedA2 ){
+					
+					alert("all correct");{window.location.href = "End3 CH.html";
+document;
+		}
+					
+				}
+				
+            });
+
+        }); 
+    </script>
+
+  </head>
+  <body>
+	  
+	 
+  <h4><strong><div align="center"> <div style="border-width: 2px; border-style:solid ; width: 140px; height: 25px; border-color: rgb(41, 36, 33); padding: 5px; text-align: center;">游戏目标:</div></div></strong></h4>
+  <h5><em><div align="center">正确分割下面的段落</div></em></h5>
+	  
+    <body><h5><div align="center">
+      要求:<br>
+	
+  阅读文章，将以下文本分成3个段落。<br>
+每一个字都可以点击, <br>但是请选择你认为应该被分段的地方。<br>（<a href="javascript:location.reload();">点错了? 点击这里重新开始分段</a>)</div></h5>
+   
+          
+		<body><h6><p class="text1">你 或 许 注 意 到 了 —— 破 折 号 代 替 了 冒 号 或 分 号 的 大 部 分 工 作。 因 为 它 比 冒 号 或 分 号 更 不 正 式， 所 以 如 果 你 过 度 使 用 它， 你 的 写 作 就 会 迅 速 下 滑: 很 快 你 的 工 作 就 会 成 为 一 个 大 干 扰。 因 此， 写 作 学 术 作 品 时 要 避 免 使 用 破 折 号： 太 不 正 规。 记 住: 在 语 法 的 界 限 内， 标 点 符 号 通 常 是 个 人 喜 好 的 问 题。 你 可 能 会 爱 上 分 号； 你 也 可 能 开 始 严 重 依 赖 逗 号 或 破 折 号 —— 这 都 取 决 于 你 想 如 何 自 然 地 说 话， 以 及 你 想 在 写 作 中 描 绘 多 少 更 自 然 的 东 西。 关 于 感 叹 号 的 补 充 说 明: 避 免 使 用 它 们。 在 我 很 小 的 时 候， 我 曾 经 给 一 位 著 名 的 设 计 师 写 了 一 封 激 动 的 感 谢 信， 他 给 我 回 了 信， 信 上 所 有 的 感 叹 号 都 用 红 色 圈 起 来 了。 这 是 一 个 残 酷 的 回 应， 但 很 有 效。 </p></h6>
+			<h6><div align="center">(*如果你正确的分段了, 此页会自动跳转到下一个界面, <br>如果此页没有跳转，说明分段错误，点击重新分段)</div></h6>
+			
+                 
+		
+		
+    </body></body>
+</html>

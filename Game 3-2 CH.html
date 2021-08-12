@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+ <script>
+var touchSphere = new Boolean(false);
+	 var clicked1 = new Boolean(false);
+	  var clicked2 = new Boolean(false);
+	  var clicked3 = new Boolean(false);
+	  var clicked4 = new Boolean(false);
+	  var clicked5 = new Boolean(false);
+	  var clicked6 = new Boolean(false);
+AFRAME.registerComponent("event-listener", {
+init: function() {
+	
+this.el.addEventListener("click", function(e) {
+// console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+	if(e.target.getAttribute('id') == 'icon1'){
+document.getElementById("frame1-1").setAttribute('opacity', 1);
+		clicked1 = true;	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+}
+// alert(e.target.id);
+//alert(touchSphere);
+});
+	
+this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon2'){
+document.getElementById("frame2-1").setAttribute('opacity', 1);
+	   clicked2 = true;	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+}
+});
+	
+this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon3'){
+document.getElementById("frame3-1").setAttribute('opacity', 1);
+	   clicked3 = true;	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+}
+});
+	
+	this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon4'){
+document.getElementById("frame4-1").setAttribute('opacity', 1);
+	   clicked4 = true;	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+}
+});
+	
+	this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon5'){
+document.getElementById("frame5-1").setAttribute('opacity', 1);
+clicked5 = true;	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+   }
+});
+	
+	this.el.addEventListener("click", function(e) {
+
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon6'){
+document.getElementById("frame6-1").setAttribute('opacity', 1);
+	   clicked6 = true;
+	   
+	   	if(clicked1 == true && clicked2 == true && clicked3 == true && clicked4 == true && clicked5 == true && clicked6 == true){window.location.href = "End1 CH.html";
+document.querySelector("#fade").emit('fade');
+		}
+}
+});
+	
+this.el.addEventListener("mouseleave", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 1, y: 1, z: 1});
+});
+}
+});
+</script>
+	</head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-sky src="hhhhh.jpg" rotation="0 -130 0"></a-sky>
+
+		<a-sky id="frame1-1" src="frame1-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 104.6 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame2-1" src="frame2-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -133.8 0"  scale="0.88 0.88 0.88"></a-sky>
+		
+		<a-sky id="frame3-1" src="frame3-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -46.85 0"  scale="0.87 0.87 0.87"></a-sky>
+		
+		<a-sky id="frame4-1" src="frame4-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 2 0"  scale="0.86 0.86 0.86"></a-sky>
+		
+		<a-sky id="frame5-1" src="frame5-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -85.9 0"  scale="0.85 0.85 0.85"></a-sky>
+		
+		<a-sky id="frame6-1" src="frame6-1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -222.3 0"  scale="0.84 0.84 0.84"></a-sky>
+		
+		<a-sky id="fade"    material="color: white; opacity: 0; transparent: true;  " rotation="0 -222 0"  scale="0.83 0.83 0.83">
+		<a-animation attribute="material.opactity" begin="fade" to="1"></a-animation>
+		</a-sky>
+		
+
+							   
+<a-plane id="icon1" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon01" position="-1.55 2.2 -5" rotation="0 0 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon2" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon02" position="-5.55 2.25 -1.2" rotation="0 80 0" width="1" height="4"
+ shadow></a-plane>
+ 
+  <a-plane id="icon3" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon03" position="-5.55 2.25 1.5" rotation="0 93 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon4" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon04" position="3.85 2.25 -4" rotation="0 -30 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon5" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon05" position="5.78 2.25 -0.45" rotation="0 -70 1" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon6" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon06" position="4.5 2.25 4.02" rotation="0 -115 1" width="1" height="4"
+ shadow></a-plane -->
+ 
+    </a-scene>
+		
+  </body>
+</html>
